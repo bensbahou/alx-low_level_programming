@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[x] == accept[y])
 			{
-				z++;
+				count++;
 				found = 1;
 				break;
 			}
@@ -29,6 +29,6 @@ unsigned int _strspn(char *s, char *accept)
 		if (!found)
 			break;
 	}
-		return (z);
+		return (count);
 
 }
