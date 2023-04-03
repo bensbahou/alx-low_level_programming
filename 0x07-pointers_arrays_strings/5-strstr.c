@@ -6,28 +6,29 @@
  * @haystack: the longer string to search
  * @needle: the first occurrence of the substring
  *
- * Return: a pointer beg of substring or @Null if it not foound.
+ * Return: a pointer beg of substring or @Null if it not found.
  */
 
 char *_strstr(char *haystack, char *needle)
 {
 	unsigned int i = 0, j = 0;
 
-	if (needle[0] == '\0')
-		return (0);
 	while (haystack[i])
 	{
-		if (haystack[i] == needle[0])
+		while ((haystack[i] == needle[0]) && needle[j])
 		{
-			for (j = 0; needle[j]; j++)
-			{
-				if (haystack[i + j] != needle[j])
-					break;
-			}
-			if (needle[j] == '\0')
-				return (haystack + i);
+			if (haystack[i + j] != needle[j])
+				break;
+			else
+				j++;
 		}
-		i++;
+		if (needle[j])
+		{
+			j = 0;
+			i++;
+		}
+		else
+			return (haystack + i);
 	}
 	return (0);
 }
