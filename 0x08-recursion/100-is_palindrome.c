@@ -6,14 +6,9 @@
  */
 int _strlen(char *s)
 {
-	int len = 0;
-
-	while (*s)
-	{
-		s++;
-		len++;
-	}
-	return (len);
+	if (!*s)
+		return (0);
+	return (1 + _strlen(s + 1));
 }
 /**
  * pal_checker - check if s is palindrome.
