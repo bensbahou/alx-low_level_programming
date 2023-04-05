@@ -13,7 +13,7 @@ int _strlen(char *s)
 		s++;
 		len++;
 	}
-	return (i);
+	return (len);
 }
 /**
  * pal_checker - check if s is palindrome.
