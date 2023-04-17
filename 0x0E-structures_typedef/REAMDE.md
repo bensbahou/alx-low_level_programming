@@ -1,1 +1,1 @@
-REAMDE for 0x0E-structures_typedef
+REAMDE for 0x0E structures typedef
