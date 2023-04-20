@@ -22,20 +22,20 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%c", va_arg(a_list, int));
-				(format[i + 1] != '\0') ? printf(", "): printf("%s","");
+				(format[i + 1] != '\0') ? printf(", ") : printf("%s", "");
 				break;
 			case 'i':
 				printf("%i", va_arg(a_list, int));
-				(format[i + 1] != '\0') ? printf(", "): printf("%s","");
+				(format[i + 1] != '\0') ? printf(", ") : printf("%s", "");
 				break;
 			case 'f':
 				printf("%f", va_arg(a_list, double));
-				(format[i + 1] != '\0') ? printf(", "): printf("%s","");
+				(format[i + 1] != '\0') ? printf(", ") : printf("%s", "");
 				break;
 			case 's':
 				str = va_arg(a_list, char*);
 				printf("%s", str ? str : "(nil)");
-				(format[i + 1] != '\0') ? printf(", "): printf("%s","");
+				(format[i + 1] != '\0') ? printf(", ") : printf("%s", "");
 				break;
 			default:
 				break;
