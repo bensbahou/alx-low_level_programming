@@ -10,10 +10,8 @@
 
 char **strtow(char *str)
 {
-	char **words = (char **)malloc(sizeof(char *) * (2));
-
 	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 
-	return (words);
+	return (NULL);
 }
