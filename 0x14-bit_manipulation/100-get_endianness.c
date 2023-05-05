@@ -1,4 +1,4 @@
-<F2>#include "main.h"
+#include "main.h"
 /**
  * get_endianness - checks the endianness.
  *
@@ -7,11 +7,8 @@
 
 int get_endianness(void)
 {
-	int integer;
-	char *character;
-
-	integer = 1;
-	character = (char *)&integer;
+	int integer = 1;
+	char *character = (char *)&integer;
 
 	return (*character);
 }
