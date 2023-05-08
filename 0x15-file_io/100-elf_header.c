@@ -19,6 +19,12 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+	header = malloc(1024);
+	if (header == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+		exit(98);
+	}
 	bytes_read = read(file_descriptor, header, 1024);
 	if (bytes_read == -1)
 	{
