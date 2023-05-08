@@ -19,5 +19,6 @@ int main(int argc, char *argv[])
 	}
 	if (argc != 2)
 		exit(98);
+	close(file_descriptor);
 	return (0);
 }
