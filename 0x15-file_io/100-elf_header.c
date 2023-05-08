@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int file_descriptor;
+
 	file_descriptor = open(argv[1], O_RDONLY);
 	if (file_descriptor == -1)
 	{
