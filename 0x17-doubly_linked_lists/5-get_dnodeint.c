@@ -5,15 +5,15 @@
  * @head: pointer to the beginning of the list
  * @index: index of the node to retrieve
  *
- * Return: NULL if node does not exist, address of node if success
+ * Return: pointer to the indexed node, or NULL on failure
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int i;
 
-	if (!head)
+	if (head == NULL)
 		return (NULL);
-	if (!index)
+	if (index == 0)
 		return (head);
 	while (i < index)
 	{
