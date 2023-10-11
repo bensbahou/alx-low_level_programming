@@ -41,16 +41,16 @@ typedef struct skiplist_s
 } skiplist_t;
 
 /* PROTOTYPES */
-int linear_search(int *, size_t , int );
-int binary_search(int *, size_t , int );
-int jump_search(int *, size_t , int );
-int interpolation_search(int *, size_t , int );
-int exponential_search(int *, size_t , int );
-int advanced_binary(int *, size_t , int );
-listint_t *jump_list(listint_t *list, size_t , int );
-listint_t *create_list(int *, size_t );
+int linear_search(int *, size_t, int);
+int binary_search(int *, size_t, int);
+int jump_search(int *, size_t, int);
+int interpolation_search(int *, size_t, int);
+int exponential_search(int *, size_t, int);
+int advanced_binary(int *, size_t, int);
+listint_t *jump_list(listint_t *list, size_t, int);
+listint_t *create_list(int *, size_t);
 void free_list(listint_t *);
 void print_list(const listint_t *);
-skiplist_t *linear_skip(skiplist_t *, int );
+skiplist_t *linear_skip(skiplist_t *, int);
 
 #endif
